@@ -81,7 +81,7 @@ export default function Navbar() {
                         fontWeight={600}
                         color={'white'}
                         bg={'blue.400'}
-                        href={'#'}
+                        href={'http://www.tezu.ernet.in/'}
                         _hover={{
                             bg: 'blue.300',
                         }}
@@ -116,7 +116,7 @@ const DesktopNav = () => {
                             fontWeight={500}
                             color={linkColor}
                             _hover={{
-                            textDecoration: 'none',
+                                textDecoration: 'none',
                                 color: linkHoverColor,
                             }}
                         >
@@ -241,8 +241,8 @@ const MobileNavItem = ({ label, children, href }) => {
                 >
                     {children &&
                         children.map((child) => (
-                        <Link key={child.label} py={2} href={child.href}>
-                            {child.label}
+                        <Link key={child.subLabel} py={2} href={child.href}>
+                            {child.subLabel}
                         </Link>
                     ))}
                 </Stack>
@@ -253,8 +253,8 @@ const MobileNavItem = ({ label, children, href }) => {
 
 const NAV_ITEMS = [
     {
-        label: 'About NCC',
-        href: '#',
+        label: 'Home',
+        href: '/home',
     },
     {
         label: 'Achievements',
@@ -315,6 +315,14 @@ const NAV_ITEMS = [
     },
     {
         label: 'Downloads',
+        href: '#',
+    },
+    {
+        label: 'Activities',
+        href: '#',
+    },
+    {
+        label: 'About',
         href: '#',
     },
     {
