@@ -21,6 +21,7 @@ import {
     Link,
     Button,
     Flex,
+    VStack,
 } from '@chakra-ui/react'
 import React, { useState } from 'react';
 import { BiLeftArrowAlt, BiRightArrowAlt } from 'react-icons/bi';
@@ -28,6 +29,7 @@ import Slider from 'react-slick';
 import sample from "../media/photos/sample.jpg"
 import ano from "../media/photos/ano.jpg"
 import Footer from '../components/Footer';
+import { blog_list, notifications } from '../utils';
 
 const settings = {
     dots: true,
@@ -56,17 +58,22 @@ export default function Home() {
                         <Box>
                             <Card width="100%">
                                 <CardHeader bg="#d9edf7" color="#31708f">
-                                    <Text>Notifications</Text>
+                                    <Link href="/notifications">Notifications</Link>
                                 </CardHeader>
 
-                                <CardBody>
+                                <CardBody overflow={"hidden"}>
                                     <Box>
-                                        <UnorderedList>
-                                            <ListItem>Lorem ipsum dolor sit amet</ListItem>
-                                            <ListItem>Consectetur adipiscing elit</ListItem>
-                                            <ListItem>Integer molestie lorem at massa</ListItem>
-                                            <ListItem>Facilisis in pretium nisl aliquet</ListItem>
-                                        </UnorderedList>
+                                        <marquee direction="up" scrollamount="3">
+                                            <UnorderedList>
+                                                {
+                                                    notifications.map((notif, idx) => {
+                                                        if(idx < 5){
+                                                            return <ListItem key={idx}>{notif.title} <Link color={"blue.500"} target="_black" href={notif.link}>(Click here)</Link></ListItem>
+                                                        }
+                                                    })
+                                                }
+                                            </UnorderedList>
+                                        </marquee>
                                     </Box>
                                 </CardBody>
                             </Card>
@@ -74,16 +81,19 @@ export default function Home() {
                         <Box>
                             <Card width="100%">
                                 <CardHeader bg="#d9edf7" color="#31708f">
-                                    <Text>What's New?</Text>
+                                    <Link href="/activities">What's New?</Link>
                                 </CardHeader>
 
                                 <CardBody>
                                     <Box>
                                         <UnorderedList>
-                                            <ListItem>Lorem ipsum dolor sit amet</ListItem>
-                                            <ListItem>Consectetur adipiscing elit</ListItem>
-                                            <ListItem>Integer molestie lorem at massa</ListItem>
-                                            <ListItem>Facilisis in pretium nisl aliquet</ListItem>
+                                            {
+                                                blog_list.map((blog, idx) => {
+                                                    if(idx < 4){
+                                                        return <ListItem key={idx}>{blog.name} <Link color={"blue.500"} href={`/activities/${blog.id}`}>(Know More)</Link></ListItem>
+                                                    }
+                                                })
+                                            }
                                         </UnorderedList>
                                     </Box>
                                 </CardBody>

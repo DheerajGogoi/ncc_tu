@@ -262,10 +262,11 @@ const NAV_ITEMS = [
     },
     {
         label: 'People',
-        href: '#',
+        href: '/people',
     },
     {
         label: 'Annual Report',
+        href: "/annual_reports",
         children: [
             {
                 subLabel: 'Year 21-22',
@@ -311,7 +312,7 @@ const NAV_ITEMS = [
     },
     {
         label: 'Gallery',
-        href: '#',
+        href: '/gallery',
     },
     {
         label: 'Downloads',
@@ -319,11 +320,11 @@ const NAV_ITEMS = [
     },
     {
         label: 'Activities',
-        href: '#',
+        href: '/activities',
     },
     {
-        label: 'About',
-        href: '#',
+        label: 'About NCC TU',
+        href: '/about',
     },
     {
         label: 'Contact Us',
