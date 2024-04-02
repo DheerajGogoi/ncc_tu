@@ -254,19 +254,19 @@ const MobileNavItem = ({ label, children, href }) => {
 const NAV_ITEMS = [
     {
         label: 'Home',
-        href: '/home',
+        href: '/ncc/react/home',
     },
     {
         label: 'Achievements',
-        href: '#',
+        href: '/ncc/react/achievements',
     },
     {
         label: 'People',
-        href: '/people',
+        href: '/ncc/react/people',
     },
     {
         label: 'Annual Report',
-        href: "/annual_reports",
+        href: "/ncc/react/annual_reports",
         children: [
             {
                 subLabel: 'Year 21-22',
@@ -312,22 +312,22 @@ const NAV_ITEMS = [
     },
     {
         label: 'Gallery',
-        href: '/gallery',
+        href: '/ncc/react/gallery',
     },
-    {
-        label: 'Downloads',
-        href: '#',
-    },
+    // {
+    //     label: 'Downloads',
+    //     href: '#',
+    // },
     {
         label: 'Activities',
-        href: '/activities',
+        href: '/ncc/react/activities',
     },
     {
         label: 'About NCC TU',
-        href: '/about',
+        href: '/ncc/react/about',
     },
     {
         label: 'Contact Us',
-        href: '#',
+        href: '/ncc/react/contact',
     },
 ];

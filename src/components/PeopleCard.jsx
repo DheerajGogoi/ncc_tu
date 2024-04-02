@@ -30,7 +30,7 @@ import {
                     mb={4}
                     pos={'relative'}
                 />
-                <Text fontWeight="bold" fontSize={'xl'} fontFamily={'body'}>
+                <Text fontWeight="bold" fontSize={'xl'}>
                     {person.name}
                 </Text>
                 <Text color={'gray.500'} fontSize={'sm'} mb={4}>
@@ -39,7 +39,6 @@ import {
                 <Text
                     textAlign={'justify'}
                     fontSize="sm"
-                    
                     color={useColorModeValue('gray.700', 'gray.400')}
                     px={3}
                 >

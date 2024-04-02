@@ -41,14 +41,14 @@ export default function Footer() {
                             </HStack>
                         </Box>
                         <Text fontSize={'sm'}>
-                            © 2023 NCC TU. All rights reserved
+                            © 2024 NCC TU. All rights reserved
                         </Text>
                     </Stack>
                     <Stack align={'flex-start'}>
                         <ListHeader>Downloads</ListHeader>
-                        <Link href={'#'}>Cadets of Tezpur University</Link>
-                        <Link href={'#'}>Cadet Handbook (Common Subject)</Link>
-                        <Link href={'#'}>Cadet Handbook (Special Subject)</Link>
+                        <Link href={'/ncc/react/people'}>Cadets of Tezpur University</Link>
+                        <Link href={'https://drive.google.com/file/d/1BSpZ5kagr_q7ELUM5ac_UfjNEoR6qEon/view?usp=sharing'}>Cadet Handbook (Common Subject)</Link>
+                        <Link href={'https://drive.google.com/file/d/1n-sY7uC2W0htpdjK6xUohkPrJwBE3Ie-/view?usp=sharing'}>Cadet Handbook (Special Subject)</Link>
                     </Stack>
                     <Stack align={'flex-start'}>
                         <ListHeader>Contact Us</ListHeader>
@@ -62,7 +62,7 @@ export default function Footer() {
                         <ListHeader>Follow Us</ListHeader>
                         <Link target="_blank" href={'https://www.instagram.com/ncctezpuruniversity/'}>Instagram</Link>
                         <Link target="_blank" href={'https://www.youtube.com/@NCCTezpurUniversity/featured'}>Youtube</Link>
-                        <Link href={'#'}>Facebook</Link>
+                        {/* <Link href={'#'}>Facebook</Link> */}
                     </Stack>
                 </SimpleGrid>
             </Container>

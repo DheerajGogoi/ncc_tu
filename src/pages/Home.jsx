@@ -30,6 +30,8 @@ import sample from "../media/photos/sample.jpg"
 import ano from "../media/photos/ano.jpg"
 import Footer from '../components/Footer';
 import { blog_list, notifications } from '../utils';
+import { useNavigate } from "react-router-dom";
+import { Carousel } from "flowbite-react";
 
 const settings = {
     dots: true,
@@ -44,13 +46,28 @@ const settings = {
 };
 
 export default function Home() {
-    
+    //hooks
+    const navigate = useNavigate();
+
+    //functions
+    const ano_read_more = () => {
+        window.open("https://www.tezu.ernet.in/dedu/faculty/doc/Dr_Hitesh_Sharma.pdf", "_blank");
+    }
 
     return (
         <Box>
             <Box>
                 <Box>
-                    <Image src={sample} width="100%" />
+                    {/* <Image src={sample} width="100%" /> */}
+                    <div className="h-56 sm:h-64 xl:h-80 2xl:h-96">
+                        <Carousel>
+                            <img src={sample} alt="..." />
+                            <img src="https://flowbite.com/docs/images/carousel/carousel-2.svg" alt="..." />
+                            <img src={sample} alt="..." />
+                            <img src="https://flowbite.com/docs/images/carousel/carousel-4.svg" alt="..." />
+                            <img src={sample} alt="..." />
+                        </Carousel>
+                    </div>
                 </Box>
 
                 <Container maxW="1200px">
@@ -58,7 +75,7 @@ export default function Home() {
                         <Box>
                             <Card width="100%">
                                 <CardHeader bg="#d9edf7" color="#31708f">
-                                    <Link href="/notifications">Notifications</Link>
+                                    <Link href="/ncc/react/notifications">Notifications</Link>
                                 </CardHeader>
 
                                 <CardBody overflow={"hidden"}>
@@ -81,7 +98,7 @@ export default function Home() {
                         <Box>
                             <Card width="100%">
                                 <CardHeader bg="#d9edf7" color="#31708f">
-                                    <Link href="/activities">What's New?</Link>
+                                    <Link href="/ncc/react/activities">What's New?</Link>
                                 </CardHeader>
 
                                 <CardBody>
@@ -90,7 +107,7 @@ export default function Home() {
                                             {
                                                 blog_list.map((blog, idx) => {
                                                     if(idx < 4){
-                                                        return <ListItem key={idx}>{blog.name} <Link color={"blue.500"} href={`/activities/${blog.id}`}>(Know More)</Link></ListItem>
+                                                        return <ListItem key={idx}>{blog.name} <Link color={"blue.500"} href={`/ncc/react/activities/${blog.id}`}>(Know More)</Link></ListItem>
                                                     }
                                                 })
                                             }
@@ -108,7 +125,7 @@ export default function Home() {
                                     The ‘Aims’ of the NCC laid out in 1988 have stood the test of time and continue to meet the requirements expected of it in the current socio–economic scenario of the country. The NCC aims at developing character, comradeship, discipline, a secular outlook, the spirit.
                                 </Text>
 
-                                <Button variant="outline" colorScheme="blue">Read more</Button>
+                                <Button variant="outline" colorScheme="blue" onClick={() => navigate("/ncc/react/about")}>Read more</Button>
                             </Box>
                             <Box mt="10">
                                 <Text fontWeight="bold" fontSize="1.5rem">PLEDGE</Text>
@@ -130,10 +147,10 @@ export default function Home() {
                                         <Flex flexDirection="column" alignSelf="flex-start" gap="3">
                                             <Text fontWeight="bold" fontSize="xl">Dr (Lt) Hitesh Sharma</Text>
                                             <Text fontSize="sm">
-                                                Lieutenant General Gurbirpal Singh, AVSM, VSM was commissioned into The PARACHUTE REGIMENT in 1987. An alumnus of the National Defence Academy, Khadakvasla and the Indian Military Academy, Dehradun.
+                                                Completed NCC Direct Commission Course [D-35] with Grade 'A' from NCC OTA, Kamptee. Commissioned in Rank of Lieutenant in National Cadet Corps.
                                             </Text>
 
-                                            <Button variant="outline" maxW="100px" size="sm" colorScheme="blue">Read more</Button>
+                                            <Button variant="outline" maxW="100px" size="sm" colorScheme="blue" onClick={ano_read_more}>Read more</Button>
                                         </Flex>
                                     </HStack>
                                 </CardBody>

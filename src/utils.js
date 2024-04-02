@@ -1,3 +1,5 @@
+// import { FaInstagram } from "react-icons/fa";
+
 exports.people_list = [
     {
         no: 0,
@@ -70,7 +72,7 @@ exports.blog_list = [
         name: "Blood Donation Camp",
         body: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software <b>like</b> Aldus PageMaker including versions of Lorem Ipsum. It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).",
         author: "UO Dheerj Gogoi",
-        tags: ["Social Service", "Community Development"],
+        tags: ["Social Service", "Community Development", "Public Awarness"],
         dated: new Date('2021-04-06T19:01:27Z'),
         link: null
     }
@@ -180,4 +182,76 @@ exports.notifications = [
         date: new Date(),
         id: 10
     },
+]
+
+exports.achievements = [
+    {
+        rank: "Corporal",
+        name: "Mrinanga Swargiary",
+        events: [
+            {
+                name: "Republic Day Camp",
+                year: "2024"
+            }
+        ],
+        description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
+        photo: "#",
+        link: "#",
+        socials: [
+            {
+                name: "Instagram",
+                link: "#",
+                // icon: <FaInstagram />
+            }
+        ]
+    },
+    {
+        rank: "Lance Corporal",
+        name: "Surajit Konwar",
+        events: [
+            {
+                name: "Republic Day Camp",
+                year: "2024"
+            }
+        ],
+        description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
+        photo: "https://images.unsplash.com/photo-1520810627419-35e362c5dc07?ixlib=rb-1.2.1&q=80&fm=jpg&crop=faces&fit=crop&h=200&w=200&ixid=eyJhcHBfaWQiOjE3Nzg0fQ",
+        link: "#",
+        socials: [
+            {
+                name: "Instagram",
+                link: "#",
+                // icon: <FaInstagram />
+            }
+        ]
+    },
+    {
+        rank: "Senior Under Officer",
+        name: "Prerna Talukdar",
+        events: [
+            {
+                name: "Republic Day Camp",
+                year: "2023"
+            },
+            {
+                name: "Youth Exchange Programme",
+                year: "2023"
+            }
+        ],
+        description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
+        photo: "https://images.unsplash.com/photo-1520810627419-35e362c5dc07?ixlib=rb-1.2.1&q=80&fm=jpg&crop=faces&fit=crop&h=200&w=200&ixid=eyJhcHBfaWQiOjE3Nzg0fQ",
+        link: "#",
+        socials: [ //only instagram and facebook is allowed
+            {
+                name: "Instagram",
+                link: "#",
+                // icon: <FaInstagram />
+            },
+            {
+                name: "Facebook",
+                link: "#",
+                // icon: <FaInstagram />
+            }
+        ]
+    }
 ]

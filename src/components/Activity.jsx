@@ -69,7 +69,7 @@ const Activity = ({ blog }) => {
                     color={useColorModeValue('gray.700', 'gray.200')}
                     fontSize="lg"
                 >
-                    {(blog.body).substring(0, 200)}... <Link zIndex={100} href={`/activities/${blog.id}`} color="blue.500"> (read more)</Link>
+                    {(blog.body).substring(0, 200)}... <Link zIndex={100} href={`/ncc/react/activities/${blog.id}`} color="blue.500"> (read more)</Link>
                 </Text>
                 <BlogAuthor name={blog.author} date={blog.dated} />
                 <Box zIndex="-100" width="100%" position="absolute" height="100%">

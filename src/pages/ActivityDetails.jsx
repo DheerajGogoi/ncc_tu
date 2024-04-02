@@ -81,7 +81,7 @@ const ActivityDetails = () => {
                                 dangerouslySetInnerHTML={{ __html:activity.body }}
                             />
                             {
-                                activity.link && <Button variant="solid" my="5" onClick={() => window.location.href = activity.link}>View More</Button>
+                                activity.link && <Button variant="solid" my="5" onClick={() => window.location.href = activity.link}>View Report</Button>
                             }
                         </Box>
                     </>
